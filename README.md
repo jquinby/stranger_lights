@@ -10,16 +10,19 @@ described there for the project:
 - power jack adapters for connecting the LED strand to DC power
 
 We hung the lights on the wall, taped up the alphabet and then went through the process of identifying which
-light was best situated to light up each letter. You'll do this the very first time you set it up, and adjust
-the values in lines 18-32 of the sketch accordingly.
+light was best situated to light up each letter. I used a simple sketch to illuminate the LEDs one at a time, wrote down
+the best LEDs and plugged the values in.
+
+You'll do this the very first time you set it up, and adjust the values in lines 18-32 of the sketch accordingly. 
 
 Things to know:
 
-- The sketch requires the FastLED library, so make sure you've got that installed.
+- The sketch requires the FastLED library.
 
 - the "fading" bits were left over from an earlier iteration. they don't work as intended, but I was OK with
-how it looked, so it stayed in
+the effect, so they stayed in. If you can grok what I was trying to do and fix it, let me know.
 
-- the lights will be random colors each time they're used.
+- the lights will be random colors each time they're used for messages. If you're OK with this, great. if not, you'll need
+to hard-code colors somehow. I didn't care, so I didn't bother.
 
 Have fun! We did. This was our first Arduino project and it was a ball to get up and running. 
