@@ -26,3 +26,5 @@ the effect, so they stayed in. If you can grok what I was trying to do and fix i
 to hard-code colors somehow. I didn't care, so I didn't bother.
 
 Have fun! We did. This was our first Arduino project and it was a ball to get up and running. 
+
+Update: the Christmas Lights sketch is just that - a series of effects driving a 500-led strand that we put on our tree. I lost the most recent version and had to rebuild a bunch of it by hand in a hurry. Sticking it here so it'll be safe. Use if if you like.
