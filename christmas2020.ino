@@ -18,7 +18,7 @@ void setup() {
 }
 
 typedef void (*SimplePatternList[])();
-SimplePatternList gPatterns = { juggle, stripes1, fireflies, solid, rainbow, rainbowWithGlitter, frost, sinelon };
+SimplePatternList gPatterns = { juggle, stripes1, fireflies, solid, rainbow, rainbowWithGlitter, ice, iceWithGlitter };
 
 uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
 uint8_t gHue = 0;                  // rotating "base color" used by many of the patterns
@@ -67,7 +67,7 @@ void fireflies(){
   // adapted from the 100-line demo reel code's "confetti" effect
   fadeToBlackBy ( leds, NUM_LEDS, 10);
   int pos = random16(NUM_LEDS);
-  leds[pos] += CRGB::Gold;
+  leds[pos] += CRGB::Yellow;
 }
 
 void frost(){
@@ -106,12 +106,16 @@ void rainbowWithGlitter() {
   addGlitter(80);
 }
 
-void sinelon(){
-  fadeToBlackBy ( leds, NUM_LEDS, 20);
-  int pos = beatsin16(13,0,NUM_LEDS);
-  leds[pos] += CHSV( gHue, 255, 192);
+void ice () {
+  for(int i = 0; i < NUM_LEDS; i++ ){
+  leds[i] = CRGB::Blue;
+  }
 }
 
+void iceWithGlitter(){
+  ice();
+  addGlitter(80);
+  }
 
 void addGlitter( fract8 chanceOfGlitter) {
   if( random8() < chanceOfGlitter) {
